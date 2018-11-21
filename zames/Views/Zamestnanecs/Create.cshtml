@@ -1,0 +1,98 @@
+﻿@model zames.Models.Zamestnanec
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Zamestnanec</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Meno" class="control-label"></label>
+                <input asp-for="Meno" class="form-control" />
+                <span asp-validation-for="Meno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Priezvisko" class="control-label"></label>
+                <input asp-for="Priezvisko" class="form-control" />
+                <span asp-validation-for="Priezvisko" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Január" class="control-label"></label>
+                <input asp-for="Január" class="form-control" />
+                <span asp-validation-for="Január" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Február" class="control-label"></label>
+                <input asp-for="Február" class="form-control" />
+                <span asp-validation-for="Február" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Marec" class="control-label"></label>
+                <input asp-for="Marec" class="form-control" />
+                <span asp-validation-for="Marec" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apríl" class="control-label"></label>
+                <input asp-for="Apríl" class="form-control" />
+                <span asp-validation-for="Apríl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Máj" class="control-label"></label>
+                <input asp-for="Máj" class="form-control" />
+                <span asp-validation-for="Máj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jún" class="control-label"></label>
+                <input asp-for="Jún" class="form-control" />
+                <span asp-validation-for="Jún" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Júl" class="control-label"></label>
+                <input asp-for="Júl" class="form-control" />
+                <span asp-validation-for="Júl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="August" class="control-label"></label>
+                <input asp-for="August" class="form-control" />
+                <span asp-validation-for="August" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="September" class="control-label"></label>
+                <input asp-for="September" class="form-control" />
+                <span asp-validation-for="September" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Október" class="control-label"></label>
+                <input asp-for="Október" class="form-control" />
+                <span asp-validation-for="Október" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="November" class="control-label"></label>
+                <input asp-for="November" class="form-control" />
+                <span asp-validation-for="November" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="December" class="control-label"></label>
+                <input asp-for="December" class="form-control" />
+                <span asp-validation-for="December" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

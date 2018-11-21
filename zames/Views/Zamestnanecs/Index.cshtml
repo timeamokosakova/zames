@@ -1,0 +1,131 @@
+﻿@model IEnumerable<zames.Models.Zamestnanec>
+
+@{
+    ViewData["Title"] = "Index";
+    var Priemer = "Priemer";
+    var Suma = "Suma";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="table-responsive">
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Meno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Priezvisko)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Januar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Februar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.April)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jun)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jul)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.August)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.September)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oktober)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.November)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.December)
+            </th>
+            <th>
+                @Priemer
+            </th>
+            <th>
+                @Suma
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Meno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Priezvisko)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Januar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Februar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.April)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jun)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jul)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.August)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.September)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Oktober)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.November)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.December)
+            </td>
+
+            <td>
+                @((item.Januar + item.Februar + item.Marec + item.April + item.Maj + item.Jun + item.Jul + item.August + item.September + item.Oktober + item.November + item.December) / 12)
+            </td>
+
+            <td>
+                @((item.Januar + item.Februar + item.Marec + item.April + item.Maj + item.Jun + item.Jul + item.August + item.September + item.Oktober + item.November + item.December))
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
